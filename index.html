@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Joshua Brion — Portafolio</title>
+  <link rel="shortcut icon" href="assets/ico.ico" type="image/x-icon">
+  <link rel="stylesheet" href="estilos/index.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/perfil.jpg" alt="Foto de Joshua Brion" class="avatar"/>
+        <div>
+          <h1 data-i18n="nombre">Joshua Brion</h1>
+          <p class="sub" data-i18n="perfil">Estudiante IT • Front-End / Desarrollo Web</p>
+        </div>
+      </div>
+      
+      <!-- Botón de menú (solo visible en móvil) -->
+      <button id="menuToggle" class="menu-toggle" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+
+
+      <nav class="nav">
+        <button id="langToggle" class="btn small">EN</button>
+        <a href="#proyectos" class="nav-link" data-i18n="nav_proyectos">Proyectos</a>
+        <a href="#habilidades" class="nav-link" data-i18n="nav_habilidades">Habilidades</a>
+        <a href="#sobre-mi" class="nav-link" data-i18n="nav_sobre">Sobre mí</a>
+        <a href="#contacto" class="nav-link btn primary" data-i18n="nav_contacto">Contacto / CV</a>
+      </nav>
+
+
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h2 id="hero-title" data-i18n="hero_titulo">Desarrollador Web en formación</h2>
+          <p id="hero-desc" data-i18n="hero_desc">Me especializo en HTML, CSS y bases de datos. Busco estancias profesionales para crear soluciones web accesibles y responsivas.</p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#proyectos" data-i18n="btn_ver_proyectos">Ver proyectos</a>
+            <a class="btn" href="assets/Joshua_Brion_CV_Estancias_UPSIN_2025.pdf" download data-i18n="btn_cv">Descargar CV</a>
+          </div>
+
+          <ul class="contact-list">
+            <li>📍 Mazatlán, Sinaloa</li>
+            <li>📧 <a href="mailto:joshuabrion94201@gmail.com">joshuabrion94201@gmail.com</a></li>
+            <li>📞 669 319 3231</li>
+          </ul>
+        </div>
+
+        <div class="hero-card">
+          <img src="assets/perfil.jpg" alt="Foto de Joshua" />
+          <p class="small muted" data-i18n="hero_detalle">Estudiante de Ingeniería en Tecnologías de la Información e Innovación Digital.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section container">
+      <h3 data-i18n="proyectos_titulo">Proyectos principales</h3>
+      <p class="muted" data-i18n="proyectos_intro">Mínimo 2 proyectos — descripción, tecnologías y enlace.</p>
+
+      <div class="projects-grid">
+        <article class="card project">
+          <img src="assets/proyecto1.jpg" alt="Proyecto 1 preview" class="project-img"/>
+          <div class="card-body">
+            <h4 data-i18n="p1_titulo">Clon del inicio de Spotify</h4>
+            <p data-i18n="p1_desc">Replica del inicio de Spotify usando Flexbox y Grid. Responsive. Trabajo académico.</p>
+            <p class="project-meta"><strong data-i18n="tecnologias">Tecnologías:</strong> HTML, CSS (Flexbox, Grid)</p>
+            <div class="project-actions">
+              <a class="btn small" href="https://hauntingpine21.github.io/Spotifyreplicon/" target="_blank" data-i18n="btn_demo">Ver demo</a>
+              <a class="btn small" href="https://github.com/HauntingPine21/Spotifyreplicon" target="_blank" data-i18n="btn_codigo">Código (GitHub)</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project">
+          <img src="assets/proyecto2.jpg" alt="Proyecto 2 preview" class="project-img"/>
+          <div class="card-body">
+            <h4 data-i18n="p2_titulo">SIREPLAC SN — BD y CRUD</h4>
+            <p data-i18n="p2_desc">Sistema con MySQL Workbench para gestión — CRUD y consultas. Proyecto de base de datos.</p>
+            <p class="project-meta"><strong data-i18n="tecnologias">Tecnologías:</strong> MySQL, Java (conexión), SQL</p>
+            <div class="project-actions">
+              <a class="btn small" href="https://gitlab.com/sistemarenta3-2/3-2sistemabicis" target="_blank" data-i18n="btn_codigo">Código (GitHub)</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="habilidades" class="section alt">
+      <div class="container">
+        <h3 data-i18n="hab_titulo">Habilidades técnicas</h3>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h4 data-i18n="hab_front">Frontend</h4>
+            <ul>
+              <li>HTML — 80%</li>
+              <li>CSS — 79%</li>
+              <li>JavaScript — básico</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4 data-i18n="hab_back">Base de datos / Backend</h4>
+            <ul>
+              <li>MySQL — 82%</li>
+              <li>Java/Kotlin — 65%</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4 data-i18n="hab_herr">Herramientas</h4>
+            <ul>
+              <li>Cisco Packet Tracer</li>
+              <li>MySQL Workbench</li>
+              <li>Git / GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="section container">
+      <h3 data-i18n="sobre_titulo">Sobre mí / Formación</h3>
+      <div class="about-grid">
+        <div>
+          <p data-i18n="sobre_desc">Soy estudiante de Ingeniería en Tecnologías de la Información e Innovación Digital en la Universidad Politécnica de Sinaloa. Me considero responsable y autodidacta.</p>
+          <h4 data-i18n="form_titulo">Formación</h4>
+          <ul>
+            <li>Ingeniería en Tecnologías de la Información — UPSIN (2024-Actualidad)</li>
+            <li>Carrera técnica en Programación — CBTIS 051</li>
+          </ul>
+        </div>
+
+        <aside class="card mini">
+          <h4 data-i18n="idiomas_titulo">Idiomas</h4>
+          <ul>
+            <li>Español — Nativo</li>
+            <li>Inglés — A2/B1</li>
+          </ul>
+          <h4 data-i18n="cert_titulo">Certificaciones</h4>
+          <div class="cert-grid">
+            <div class="cert-card">
+              <img src="assets/certificaciones/cisco.jpg" alt="Cisco Networking Essentials">
+              <p><strong>Cisco Networking Essentials</strong><br>Emitido por Cisco • 2024</p>
+              <a href="https://www.credly.com/badges/cd68fd56-1818-4b39-b1e2-685b1e08751f" target="_blank">Ver credencial</a>
+            </div>
+
+            <div class="cert-card">
+              <img src="assets/certificaciones/htmlcss.jpg" alt="HTML & CSS Course">
+              <p><strong>HTML & CSS Fundamentals</strong><br>FreeCodeCamp • 2024</p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </section>
+
+    <section id="contacto" class="section footer">
+      <div class="container">
+        <h3 data-i18n="contacto_titulo">Contacto</h3>
+        <p data-i18n="contacto_desc">¿Quieres contactarme o ver mi CV? Descárgalo o envíame un correo.</p>
+
+        <div class="contact-row">
+          <a class="btn primary" href="assets/Joshua_Brion_CV_Estancias_UPSIN_2025.pdf" download data-i18n="btn_cv">Descargar CV (PDF)</a>
+          <a class="btn" href="mailto:joshuabrion94201@gmail.com" data-i18n="btn_email">Enviar correo</a>
+        </div>
+        <p class="muted small">© Joshua Brion — Portafolio académico.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

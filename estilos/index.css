@@ -1,0 +1,468 @@
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --accent: #0b7cff;
+  --text: #111827;
+  --muted: #6b7280;
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  --container: 1100px;
+  --gap: 1.2rem;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* RESET Y BASE */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* HEADER */
+.site-header {
+  background: rgba(255, 255, 255, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.brand {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* NAVEGACIÓN */
+.nav {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--muted);
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.nav-link:hover {
+  background: rgba(11, 124, 255, 0.06);
+  color: var(--accent);
+}
+
+/* BOTONES */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: white;
+  text-decoration: none;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn.small {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.85rem;
+}
+.btn.primary, .btn.primary:visited {
+  background: var(--accent);
+  color: white;
+  border: 0;
+}
+.btn.primary:hover {
+  opacity: 0.9;
+}
+.btn.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* HERO */
+.hero {
+  padding: 2.5rem 0;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  align-items: center;
+}
+.hero-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  text-align: center;
+}
+.hero-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+.contact-list li {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* SECCIONES GENERALES */
+.section {
+  padding: 2rem 0;
+}
+.section.alt {
+  background: transparent;
+  padding: 2rem 0;
+}
+h3 {
+  margin: 0 0 0.6rem 0;
+}
+.muted {
+  color: var(--muted);
+}
+
+/* PROYECTOS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.project-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 1rem;
+}
+.project-title {
+  margin: 0 0 0.4rem 0;
+}
+.project-desc {
+  margin: 0 0 0.6rem 0;
+  color: var(--muted);
+}
+.project-meta {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* HABILIDADES */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.skill-group {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+.skill-group h4 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+/* SOBRE MÍ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1.5rem;
+}
+.card.mini {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+.cert-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-align: center;
+  padding: 0.8rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.cert-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.cert-card p {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin: 0.5rem 0;
+}
+.cert-card a {
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.cert-card a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+  background: transparent;
+  padding: 2rem 0;
+}
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+.small {
+  font-size: 0.9rem;
+}
+
+/* === MEDIA QUERIES === */
+
+/* Tablets */
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-card {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Celulares grandes (horizontal y vertical) */
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .brand {
+    justify-content: center;
+    width: 100%;
+  }
+  .hero {
+    padding: 1.5rem 0;
+  }
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-img {
+    height: 180px;
+  }
+  .cert-card img {
+    height: 100px;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 420px) {
+  h1 {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  .avatar {
+    width: 48px;
+    height: 48px;
+  }
+  .cert-card p {
+    font-size: 0.8rem;
+  }
+}
+
+/* === MENÚ DESPLEGABLE RESPONSIVO === */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto de cruz cuando está abierto */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Estilo del nav en móvil */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 50;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: var(--shadow);
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    left: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem;
+    color: var(--text);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Pequeña animación de aparición */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
